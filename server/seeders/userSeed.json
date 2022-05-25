@@ -1,0 +1,30 @@
+[
+  { 
+      "username" : "Carlos", 
+      "email" : "carlos@gmail.com", 
+      "password" : "password1", 
+      "favorites" : [], 
+      "advertise" : [] 
+  },
+  { 
+      "username" : "Gustavo", 
+      "email" : "gustavo0@gmail.com", 
+      "password" : "password2", 
+      "favorites" : [], 
+      "advertise" : [] 
+  },
+  { 
+      "username" : "Hazel", 
+      "email" : "hazel@gmail.com", 
+      "password" : "password3", 
+      "favorites" : [], 
+      "advertise" : [] 
+  },
+  { 
+      "username" : "Ernest", 
+      "email" : "ernest@gmail.com", 
+      "password" : "password4", 
+      "favorites" : [], 
+      "advertise" : [] 
+  }
+]
