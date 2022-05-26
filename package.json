@@ -15,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "config.json": "^0.0.4",
+    "server": "^1.0.37"
   }
 }
