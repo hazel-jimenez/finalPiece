@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
-import SingleAd from './pages/SingleAd';
+import SingleAdvertise from './pages/SingleAd';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
@@ -62,8 +62,8 @@ function App() {
                 element={<Profile />} 
               />
               <Route 
-                path="/ad/:id" 
-                element={<SingleAd />} 
+                path="/advertise/:id" 
+                element={<SingleAdvertise />} 
               />
               <Route 
                 path="*" 
