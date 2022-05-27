@@ -1,4 +1,4 @@
 const User = require('./User');
-const Advertise = require('./Advertise');
+const Ad = require('./Ad');
 
-module.exports = { User, Advertise };
+module.exports = { User, Ad };

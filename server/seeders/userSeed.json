@@ -4,27 +4,27 @@
       "email" : "carlos@gmail.com", 
       "password" : "password1", 
       "favorites" : [], 
-      "advertise" : [] 
+      "ads" : [] 
   },
   { 
       "username" : "Gustavo", 
       "email" : "gustavo0@gmail.com", 
       "password" : "password2", 
       "favorites" : [], 
-      "advertise" : [] 
+      "ads" : [] 
   },
   { 
       "username" : "Hazel", 
       "email" : "hazel@gmail.com", 
       "password" : "password3", 
       "favorites" : [], 
-      "advertise" : [] 
+      "ads" : [] 
   },
   { 
       "username" : "Ernest", 
       "email" : "ernest@gmail.com", 
       "password" : "password4", 
       "favorites" : [], 
-      "advertise" : [] 
+      "ads" : [] 
   }
 ]

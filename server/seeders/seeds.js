@@ -1,22 +1,22 @@
 const userSeeds = require('./userSeed.json');
-const advertiseSeeds = require('./advertiseSeed.json');
+const adSeeds = require('./adSeed.json');
 const db = require('../config/connection');
-const { Advertise, User } = require('../models');
+const { Ad, User } = require('../models');
 
 db.once('open', async () => {
   try {
-    await Advertise.deleteMany({});
+    await Ad.deleteMany({});
     await User.deleteMany({});
 
     await User.create(userSeeds);
 
-    for (let i = 0; i < advertiseSeeds.length; i++) {
-      const { _id, advertiseAuthor } = await Advertise.create(advertiseSeeds[i]);
+    for (let i = 0; i < adSeeds.length; i++) {
+      const { _id, adAuthor } = await Ad.create(adSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: advertiseAuthor },
+        { username: adAuthor },
         {
           $addToSet: {
-            advertise: _id,
+            ad: _id,
           },
         }
       );
