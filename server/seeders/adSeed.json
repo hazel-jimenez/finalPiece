@@ -1,7 +1,7 @@
 [
   {
       
-      "advertiseText" : "molestiae dicta voluptas ut iusto et hic nam", 
+      "adText" : "molestiae dicta voluptas ut iusto et hic nam", 
       "username" : "Carlos", 
       "reviews" : [ 
           {
@@ -11,12 +11,12 @@
       ] 
   },
   {
-      "advertiseText" : "sapiente illo animi non et molestiae et blanditiis adipisci aut ut dolore", 
+      "adText" : "sapiente illo animi non et molestiae et blanditiis adipisci aut ut dolore", 
       "username" : "Hazel", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "et ea non ut occaecati quasi ullam", 
+      "adText" : "et ea non ut occaecati quasi ullam", 
       "username" : "Ernest", 
       "reviews" : [ 
           {
@@ -26,17 +26,17 @@
    ] 
   },
   {
-      "advertiseText" : "nam assumenda dolorum est sint eum qui dolorem", 
+      "adText" : "nam assumenda dolorum est sint eum qui dolorem", 
       "username" : "Carlos", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "architecto et eos ut odio repudiandae", 
+      "adText" : "architecto et eos ut odio repudiandae", 
       "username" : "Gustavo", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "voluptas quis voluptates et laborum est facere et quia quasi cupiditate dolorem", 
+      "adText" : "voluptas quis voluptates et laborum est facere et quia quasi cupiditate dolorem", 
       "username" : "Hazel", 
       "reviews" : [ 
           {
@@ -50,7 +50,7 @@
    ] 
   },
   {
-      "advertiseText" : "nisi rerum quae dolores dolorum quod qui quos commodi dignissimos sapiente eius rem vero", 
+      "adText" : "nisi rerum quae dolores dolorum quod qui quos commodi dignissimos sapiente eius rem vero", 
       "username" : "Ernest", 
       "reviews" : [ 
           {
@@ -60,22 +60,22 @@
    ] 
   },
   {
-      "advertiseText" : "officia ex", 
+      "adText" : "officia ex", 
       "username" : "Gustavo", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "harum cum molestias sint aperiam natus saepe sit dolorem omnis minima", 
+      "adText" : "harum cum molestias sint aperiam natus saepe sit dolorem omnis minima", 
       "username" : "Hazel", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "itaque distinctio sunt et autem saepe non officia consequuntur qui sit nesciunt rerum porro corrupti possimus praesentium voluptas dolore", 
+      "adText" : "itaque distinctio sunt et autem saepe non officia consequuntur qui sit nesciunt rerum porro corrupti possimus praesentium voluptas dolore", 
       "username" : "Ernest", 
       "reviews" : [ ] 
   },
   {
-      "advertiseText" : "labore omnis ut exercitationem", 
+      "adText" : "labore omnis ut exercitationem", 
       "username" : "Carlos", 
       "reviews" : [ 
           {

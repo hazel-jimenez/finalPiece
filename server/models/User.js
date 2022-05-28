@@ -20,10 +20,10 @@ const userSchema = new Schema(
       required: true,
       minlength: 5
     },
-    advertise: [
+    ads: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Advertise'
+        ref: 'Ad'
       }
     ],
     favorites: [

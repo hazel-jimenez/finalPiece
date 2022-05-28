@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { User, Ad } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -28,12 +28,12 @@ const resolvers = {
         .populate('ads')
         .populate('ads');
     },
-    thoughts: async (parent, { username }) => {
+    ads: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+      return Ad.find(params).sort({ createdAt: -1 });
     },
-    thought: async (parent, { _id }) => {
-      return Thought.findOne({ _id });
+    ad: async (parent, { _id }) => {
+      return Ad.findOne({ _id });
     }
   },
 
@@ -60,9 +60,9 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addThought: async (parent, args, context) => {
+    addAd: async (parent, args, context) => {
       if (context.user) {
-        const thought = await Thought.create({ ...args, username: context.user.username });
+        const ad = await Ad.create({ ...args, username: context.user.username });
 
         await User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -77,13 +77,13 @@ const resolvers = {
     },
     addReaction: async (parent, { adId, reactionBody }, context) => {
       if (context.user) {
-        const updatedAd = await Thought.findOneAndUpdate(
-          { _id: thoughtId },
+        const updatedAd = await Ad.findOneAndUpdate(
+          { _id: adId },
           { $push: { reactions: { reactionBody, username: context.user.username } } },
           { new: true, runValidators: true }
         );
 
-        return updatedThought;
+        return updatedAd;
       }
 
       throw new AuthenticationError('You need to be logged in!');
