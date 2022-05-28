@@ -40,8 +40,8 @@ export const ADD_AD = gql`
 `;
 
 export const ADD_REVIEW = gql`
-  mutation addReaction($adId: ID!, $reviewBody: String!) {
-    addReaction(adId: $adId, reviewBody: $reviewBody) {
+  mutation addReview($adId: ID!, $reviewBody: String!) {
+    addReview(adId: $adId, reviewBody: $reviewBody) {
       _id
       reviewCount
       reviews {
