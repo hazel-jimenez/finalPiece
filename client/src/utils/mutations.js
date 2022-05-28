@@ -68,7 +68,7 @@ export const ADD_FAVORITE = gql`
   }
 `;
 
-export const REMOVE_FRIEND = gql`
+export const REMOVE_FAVORITE = gql`
   mutation removeFavorite($id: ID!) {
     removeFavorite(id: $id) {
       _id
