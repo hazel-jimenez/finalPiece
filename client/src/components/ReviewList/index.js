@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ReviewList = ({ reactions }) => {
+const ReviewList = ({ reviews }) => {
   return (
     <div className="card mb-3">
       <div className="card-header">
