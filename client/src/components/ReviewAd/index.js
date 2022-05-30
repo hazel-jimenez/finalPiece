@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-
-import { useMutation } from '@apollo/client';
-import { ADD_REVIEW } from '../../utils/mutations';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_REVIEW } from "../../utils/mutations";
 
 const ReviewForm = ({ adId }) => {
-  const [reviewBody, setBody] = useState('');
+  const [reviewBody, setBody] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
-  const [addReview, { error }] = useMutation(ADD_REVIEW);
 
-  // update state based on form input changes
+  const [addReview, { error }] = useMutation(ADD_REVIEW);
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {
       setBody(event.target.value);
@@ -16,17 +14,16 @@ const ReviewForm = ({ adId }) => {
     }
   };
 
-  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     try {
       await addReview({
-        variables: { reviewBody, adId },
+        variables: {
+          reviewBody,
+          adId,
+        },
       });
-
-      // clear form value
-      setBody('');
+      setBody("");
       setCharacterCount(0);
     } catch (e) {
       console.error(e);
@@ -36,19 +33,19 @@ const ReviewForm = ({ adId }) => {
   return (
     <div>
       <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
+        className="flex-row justify-center justify-space-between-md align-stretch"
       >
         <textarea
-          placeholder="Leave a review for the developer"
-          value={reviewBody}
+          placeholder="Leave a review to this ad..."
           className="form-input col-12 col-md-9"
+          value={reviewBody}
           onChange={handleChange}
         ></textarea>
 
@@ -56,8 +53,6 @@ const ReviewForm = ({ adId }) => {
           Submit
         </button>
       </form>
-
-      {error && <div>Something went wrong...</div>}
     </div>
   );
 };

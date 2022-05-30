@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { useMutation } from '@apollo/client';
-import { ADD_AD } from '../../utils/mutations';
-import { QUERY_ADS, QUERY_ME } from '../../utils/queries';
+import { useMutation } from "@apollo/client";
+import { ADD_AD } from "../../utils/mutations";
+
+import { QUERY_ADS, QUERY_ME } from "../../utils/queries";
 
 const AdForm = () => {
-  const [adText, setText] = useState('');
-  const [characterCount, setCharacterCount] = useState(0);
-
   const [addAd, { error }] = useMutation(ADD_AD, {
     update(cache, { data: { addAd } }) {
-      
-        // could potentially not exist yet, so wrap in a try/catch
+      // could potentially not exist yet, so wrap in a try/catch
       try {
         // update me array's cache
         const { me } = cache.readQuery({ query: QUERY_ME });
@@ -20,7 +17,7 @@ const AdForm = () => {
           data: { me: { ...me, ads: [...me.ads, addAd] } },
         });
       } catch (e) {
-        console.warn("First ad insertion by user!")
+        console.warn("First ad insertion by user!");
       }
 
       // update ad array's cache
@@ -29,10 +26,11 @@ const AdForm = () => {
         query: QUERY_ADS,
         data: { ads: [addAd, ...ads] },
       });
-    }
+    },
   });
+  const [adText, setText] = useState("");
+  const [characterCount, setCharacterCount] = useState(0);
 
-  // update state based on form input changes
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {
       setText(event.target.value);
@@ -40,17 +38,17 @@ const AdForm = () => {
     }
   };
 
-  // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     try {
+      // add ad to database
       await addAd({
         variables: { adText },
       });
 
       // clear form value
-      setText('');
+      setText("");
       setCharacterCount(0);
     } catch (e) {
       console.error(e);
@@ -60,7 +58,7 @@ const AdForm = () => {
   return (
     <div>
       <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
