@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose');
 const reviewSchema = require('./Review');
 const dateFormat = require('../utils/dateFormat');
 
-const AdSchema = new Schema(
+const adSchema = new Schema(
   {
-    AdText: {
+    adText: {
       type: String,
-      required: 'You need to leave a Ad!',
+      required: 'You need to leave a ad!',
       minlength: 1,
       maxlength: 280
     },
@@ -28,10 +28,10 @@ const AdSchema = new Schema(
   }
 );
 
-AdSchema.virtual('reviewCount').get(function() {
+adSchema.virtual('reviewCount').get(function() {
   return this.reviews.length;
 });
 
-const Ad = model('Ad', AdSchema);
+const Ad = model('Ad', adSchema);
 
 module.exports = Ad;

@@ -56,7 +56,7 @@ userSchema.methods.isCorrectPassword = async function(password) {
 };
 
 userSchema.virtual('favoriteCount').get(function() {
-  return this.favorite.length;
+  return this.favorites.length;
 });
 
 const User = model('User', userSchema);
