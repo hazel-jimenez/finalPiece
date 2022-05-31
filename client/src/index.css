@@ -1,10 +1,10 @@
 :root {
   --primary: #497573;
-  --secondary: #99f7f2;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
   --light: #e1f5f4;
-  --dark: #6c7575;
+  --dark: #ffffff;
+  --blue: rgb(129, 233, 233)
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -53,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -61,6 +61,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+  font-weight: bolder;
 }
 
 h2 {
@@ -128,7 +129,7 @@ nav a:hover {
   margin: 5px 0;
   border-radius: var(--border-radius);
   border: none;
-  color: var(--dark);
+  color: rgb(51, 51, 255);
   outline: none;
   background-color: var(--secondary);
   transition: all 0.5s;
@@ -156,7 +157,7 @@ nav a:hover {
 .card-header {
   color: var(--secondary);
   margin: 0;
-  background-color: var(--dark);
+  background-color: rgba(102, 95, 104, 0.397);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
@@ -183,7 +184,7 @@ nav a:hover {
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
-  border: 2px solid var(--dark);
+  border: 2px solid rgb(138, 88, 255));
   border-radius: var(--border-radius);
 }
 
@@ -1177,6 +1178,10 @@ nav a:hover {
   .align-center-lg {
     align-items: center;
   }
+}
+
+body {
+  background-image: linear-gradient(to right,rgb(129, 233, 233) , rgb(26, 29, 212));
 }
 
 /* col-xl */
