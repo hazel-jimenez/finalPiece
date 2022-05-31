@@ -16,6 +16,7 @@ import NoMatch from './pages/NoMatch';
 import SingleAd from './pages/SingleAd';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import Enter from './pages/Enter';
 
 import { setContext } from "@apollo/client/link/context";
 
@@ -46,7 +47,8 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Enter />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path='/profile/*' element={<Profile />} />
