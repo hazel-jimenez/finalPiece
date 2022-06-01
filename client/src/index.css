@@ -140,7 +140,7 @@ nav a:hover {
 
 .btn:hover,
 .pill:hover {
-  color: var(--secondary);
+  color: rgb(138, 88, 255);
   background-color: var(--dark);
 }
 
@@ -154,7 +154,7 @@ nav a:hover {
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   background-color: var(--light);
-  color: var(--dark);
+  color: rgb(58, 58, 58);
 }
 
 .card-header {
@@ -187,7 +187,7 @@ nav a:hover {
   padding: 0.75rem;
   margin: 0.2rem 0;
   font-size: 1.2rem;
-  border: 2px solid rgb(138, 88, 255));
+  border: 2px solid rgb(138, 88, 255);
   border-radius: var(--border-radius);
 }
 
