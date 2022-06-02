@@ -124,6 +124,10 @@ nav a:hover {
   font-size: 2.5rem;
 }
 
+p {
+  color: #000;
+}
+
 .btn,
 .pill {
   font-size: 1.3rem;
