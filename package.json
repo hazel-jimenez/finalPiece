@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimenezraul/deep-ads.git"
+    "url": "git+https://github.com/hazel-jimenez/finalPiece.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jimenezraul/deep-ads/issues"
+    "url": "https://github.com/hazel-jimenez/finalPiece/issues"
   },
-  "homepage": "https://github.com/jimenezraul/deep-ads#readme",
+  "homepage": "https://github.com/hazel-jimenez/finalPiece#readme",
   "devDependencies": {
     "concurrently": "^7.1.0"
   }
