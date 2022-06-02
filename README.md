@@ -1,5 +1,4 @@
-Project Requirements
-Your group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on user demand. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill some specific requirements.
+devFinder is a place where you can find your favorite developers. If you are in need of an app or website, come visit devFinder.  
 
 ![image](https://user-images.githubusercontent.com/95004183/171749727-e463c07e-6e86-4c44-a26b-efd33d3b2c1c.png)
 
